@@ -19,3 +19,18 @@ request.onload = function() {
 };
 //Send request
 request.send();
+
+// Declares access variable to root
+const app = document.getElementById('root');
+
+// Creates the logo image
+const logo = document.createElement('img');
+logo.src = 'logo.png';
+
+// Creates the main container
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+// Adds logo and container to website
+app.appendChild(logo);
+app.appendChild(container);
