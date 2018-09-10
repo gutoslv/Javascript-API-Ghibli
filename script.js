@@ -5,7 +5,13 @@ let request = new XMLHttpRequest();
 request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
 
 request.onload = function () {
-    //Begin accessign JSON data here
+    //Begin accessing JSON data here
+    let data = JSON.parse(this.response);
+
+    data.forEach(movie => {
+        // Log each movie's title
+        console.log(movie.title);
+    })
 }
 
 //Send request
